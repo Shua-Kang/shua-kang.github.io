@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Xuhui Kang | University of Virginia</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Xuhui (Joshua) Kang — Ph.D. student in Computer Science at the University of Virginia, working on robotic manipulation and human-AI interaction.">
+    <meta name="keywords" content="Xuhui Kang, Joshua Kang, robotics, robot manipulation, human-AI collaboration, imitation learning, diffusion policy, tactile, UVA, University of Virginia">
+
+    <meta property="og:title" content="Xuhui Kang">
+    <meta property="og:description" content="Ph.D. student in Computer Science at the University of Virginia — robotic manipulation and human-AI interaction.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="./assets/img/favicon-dark.png" type="image/png" />
+    <link rel="icon" media="(prefers-color-scheme:light)" href="./assets/img/favicon.png" type="image/png" />
+    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/publications.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a class="image avatar"><img src="./assets/img/profile.jpg" alt="Xuhui Kang" /></a>
+
+        <h1>Xuhui Kang</h1>
+
+        <position style="font-size:1.10rem;">Ph.D. Student in Computer Science</position>
+        <br>
+        <a href="https://www.virginia.edu/" rel="noopener" target="_blank"><autocolor>University of Virginia</autocolor></a>
+        <br>
+        <a href="mailto:xuhui@virginia.edu"><email>xuhui (at) virginia.edu</email></a>
+
+        <br>
+        <br>
+        <div class="social-icons">
+          <a style="margin: 0 5px 0 0" href="https://scholar.google.com/citations?user=sIY8FtgAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener">
+            <i class="ai ai-google-scholar"></i>
+          </a>
+          <a style="margin: 0 5px 0 0" href="https://github.com/Shua-Kang" title="GitHub" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+          <a style="margin: 0 5px 0 0" href="https://www.linkedin.com/in/xuhui-joshua-kang-44314317b" title="LinkedIn" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a style="margin: 0 0 0 0" href="https://x.com/JoshuaK78925" title="X (Twitter)" target="_blank" rel="noopener">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+        <br>
+      </header>
+
+      <section>
+
+        <h2 id="about-me">About Me</h2>
+        <p>
+          I am a Ph.D. student in Computer Science at the
+          <a href="https://www.virginia.edu/" target="_blank" rel="noopener">University of Virginia</a>,
+          advised by Prof. <a href="https://yenlingkuo.com/" target="_blank" rel="noopener">Yen-Ling Kuo</a>
+          in the Link Lab. My research focuses on <strong>robust robot learning</strong>,
+          <strong>tactile and force-regulated manipulation</strong>, and
+          <strong>human&ndash;AI/robot collaboration</strong>. I am particularly interested in enhancing
+          AI models' perception and understanding of the physical world, with the goal of building
+          generalizable and robust robotic systems that can perform real-world tasks and collaborate
+          effectively with humans.
+        </p>
+        <p>
+          Before UVA, I received my B.E. in Software Engineering (Embedded Systems) from the
+          <a href="https://en.uestc.edu.cn/" target="_blank" rel="noopener">University of Electronic
+          Science and Technology of China (UESTC)</a>, and worked on machine learning and embedded AI
+          systems in industry.
+        </p>
+
+        <h2 id="research-interests">Research Interests</h2>
+        <ul>
+          <li><strong>Robust robot learning:</strong> adapting pre-trained robot policies and vision-language-action models so they stay reliable under distribution shift</li>
+          <li><strong>Tactile and force-regulated manipulation:</strong> low-cost tactile and force-controlled hardware, and policies that regulate contact force for delicate objects</li>
+          <li><strong>Human&ndash;AI/robot collaboration:</strong> physically-grounded collaboration with diverse human partners</li>
+        </ul>
+
+        <h2 id="publications" style="margin: 2px 0px 15px;">Publications</h2>
+
+        <div class="pub-toggle">
+          <button id="btn-selected" class="active" type="button" onclick="showPubs('selected')">Selected</button>
+          <button id="btn-full" type="button" onclick="showPubs('full')">Full list</button>
+        </div>
+
+        <!-- ===================== SELECTED (first-author) ===================== -->
+        <div id="pubs-selected">
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://force-gripper.github.io/" target="_blank" rel="noopener" aria-label="Force-regulated gripper project page">
+              <video class="cover-vid" autoplay loop muted playsinline><source src="./assets/img/covers/force_gripper.mp4" type="video/mp4"></video>
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">Preprint</abbr>
+              <div class="title"><a href="https://force-gripper.github.io/" target="_blank" rel="noopener">Learning Force-Regulated Manipulation with a Low-Cost Tactile-Force-Controlled Gripper</a></div>
+              <div class="author"><strong>Xuhui Kang</strong><sup>*</sup>, Tongxuan Tian<sup>*</sup>, Sung-Wook Lee, Binghao Huang, Yunzhu Li, Yen-Ling Kuo</div>
+              <div class="periodical"><em>Under review</em>, 2026 &nbsp;<span class="eq-note">(* equal contribution)</span></div>
+              <div class="pub-links"><a href="https://force-gripper.github.io/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2602.10013" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/Shua-Kang/force_gripper_hardware" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://shua-kang.github.io/RARA_robot/" target="_blank" rel="noopener" aria-label="RARA project page">
+              <div class="blurfill">
+                <video class="bg" autoplay loop muted playsinline><source src="./assets/img/covers/rara_toaster.mp4" type="video/mp4"></video>
+                <video class="fg" autoplay loop muted playsinline><source src="./assets/img/covers/rara_toaster.mp4" type="video/mp4"></video>
+              </div>
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">Preprint</abbr>
+              <div class="title"><a href="https://shua-kang.github.io/RARA_robot/" target="_blank" rel="noopener">RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation</a></div>
+              <div class="author"><strong>Xuhui Kang</strong>, Sung-Wook Lee, Yan Zhuang, Tianle Zhong, Yen-Ling Kuo</div>
+              <div class="periodical"><em>Under review</em>, 2026</div>
+              <div class="pub-links"><a href="https://shua-kang.github.io/RARA_robot/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2610.13578" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/Shua-Kang/RARA" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://live-robotics-uva.github.io/movingout_ai/" target="_blank" rel="noopener" aria-label="Moving Out project page">
+              <div class="blurfill">
+                <video class="bg" autoplay loop muted playsinline><source src="./assets/img/covers/moving_out_handoff.mp4" type="video/mp4"></video>
+                <video class="fg" autoplay loop muted playsinline><source src="./assets/img/covers/moving_out_handoff.mp4" type="video/mp4"></video>
+              </div>
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">ICML</abbr>
+              <div class="title"><a href="https://live-robotics-uva.github.io/movingout_ai/" target="_blank" rel="noopener">Moving Out: Physically-grounded Human-AI Collaboration</a></div>
+              <div class="author"><strong>Xuhui Kang</strong>, Sung-Wook Lee, Haolin Liu, Yuyan Wang, Yen-Ling Kuo</div>
+              <div class="periodical"><em>International Conference on Machine Learning (ICML)</em>, 2026</div>
+              <div class="pub-links"><a href="https://live-robotics-uva.github.io/movingout_ai/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2507.18623" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/live-robotics-uva/moving_out_env" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ========================== FULL LIST ============================= -->
+        <div id="pubs-full">
+
+          <div class="pub-group-h">Under Review</div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://force-gripper.github.io/" target="_blank" rel="noopener" aria-label="Force-regulated gripper project page">
+              <video class="cover-vid" autoplay loop muted playsinline><source src="./assets/img/covers/force_gripper.mp4" type="video/mp4"></video>
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">Preprint</abbr>
+              <div class="title"><a href="https://force-gripper.github.io/" target="_blank" rel="noopener">Learning Force-Regulated Manipulation with a Low-Cost Tactile-Force-Controlled Gripper</a></div>
+              <div class="author"><strong>Xuhui Kang</strong><sup>*</sup>, Tongxuan Tian<sup>*</sup>, Sung-Wook Lee, Binghao Huang, Yunzhu Li, Yen-Ling Kuo</div>
+              <div class="periodical"><em>Under review</em>, 2026 &nbsp;<span class="eq-note">(* equal contribution)</span></div>
+              <div class="pub-links"><a href="https://force-gripper.github.io/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2602.10013" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/Shua-Kang/force_gripper_hardware" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://shua-kang.github.io/RARA_robot/" target="_blank" rel="noopener" aria-label="RARA project page">
+              <div class="blurfill">
+                <video class="bg" autoplay loop muted playsinline><source src="./assets/img/covers/rara_toaster.mp4" type="video/mp4"></video>
+                <video class="fg" autoplay loop muted playsinline><source src="./assets/img/covers/rara_toaster.mp4" type="video/mp4"></video>
+              </div>
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">Preprint</abbr>
+              <div class="title"><a href="https://shua-kang.github.io/RARA_robot/" target="_blank" rel="noopener">RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation</a></div>
+              <div class="author"><strong>Xuhui Kang</strong>, Sung-Wook Lee, Yan Zhuang, Tianle Zhong, Yen-Ling Kuo</div>
+              <div class="periodical"><em>Under review</em>, 2026</div>
+              <div class="pub-links"><a href="https://shua-kang.github.io/RARA_robot/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2610.13578" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/Shua-Kang/RARA" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://arxiv.org/abs/2606.23085" target="_blank" rel="noopener">
+              <img class="cover-img" src="./assets/img/covers/foresight.jpg" alt="Foresight teaser">
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">Preprint</abbr>
+              <div class="title"><a href="https://arxiv.org/abs/2606.23085" target="_blank" rel="noopener">Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents</a></div>
+              <div class="author">Haoran Zhang, Yifu Lu, Boyang Wang, <strong>Xuhui Kang</strong>, Yen-Ling Kuo, Zezhou Cheng, Mengdi Wang, Odest Chadwicke Jenkins</div>
+              <div class="periodical"><em>Under review</em>, 2026</div>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2606.23085" target="_blank" rel="noopener">arXiv</a></div>
+            </div>
+          </div>
+
+          <div class="pub-group-h">Conference</div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://live-robotics-uva.github.io/movingout_ai/" target="_blank" rel="noopener" aria-label="Moving Out project page">
+              <div class="blurfill">
+                <video class="bg" autoplay loop muted playsinline><source src="./assets/img/covers/moving_out_handoff.mp4" type="video/mp4"></video>
+                <video class="fg" autoplay loop muted playsinline><source src="./assets/img/covers/moving_out_handoff.mp4" type="video/mp4"></video>
+              </div>
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">ICML</abbr>
+              <div class="title"><a href="https://live-robotics-uva.github.io/movingout_ai/" target="_blank" rel="noopener">Moving Out: Physically-grounded Human-AI Collaboration</a></div>
+              <div class="author"><strong>Xuhui Kang</strong>, Sung-Wook Lee, Haolin Liu, Yuyan Wang, Yen-Ling Kuo</div>
+              <div class="periodical"><em>International Conference on Machine Learning (ICML)</em>, 2026</div>
+              <div class="pub-links"><a href="https://live-robotics-uva.github.io/movingout_ai/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2507.18623" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/live-robotics-uva/moving_out_env" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://tbd-vla.github.io/" target="_blank" rel="noopener">
+              <img class="cover-img" src="./assets/img/covers/TBD_VLA.jpg" alt="TBD-VLA teaser">
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">CoRL</abbr>
+              <div class="title"><a href="https://tbd-vla.github.io/" target="_blank" rel="noopener">TBD-VLA: Temporal Block Diffusion Vision Language Action Model</a></div>
+              <div class="author">Sung-Wook Lee, <strong>Xuhui Kang</strong>, Yen-Ling Kuo</div>
+              <div class="periodical"><em>Conference on Robot Learning (CoRL)</em>, 2026</div>
+              <div class="pub-links"><a href="https://tbd-vla.github.io/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2606.07895" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/TBD-VLA/lerobot" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://o3afford.github.io/" target="_blank" rel="noopener">
+              <img class="cover-img" src="./assets/img/covers/o3afford.jpg" alt="O3Afford teaser">
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">CoRL</abbr>
+              <div class="title"><a href="https://o3afford.github.io/" target="_blank" rel="noopener">O<sup>3</sup>Afford: One-Shot 3D Object-to-Object Affordance Grounding for Generalizable Robotic Manipulation</a></div>
+              <div class="author">Tongxuan Tian, <strong>Xuhui Kang</strong>, Yen-Ling Kuo</div>
+              <div class="periodical"><em>Conference on Robot Learning (CoRL)</em>, 2025</div>
+              <div class="pub-links"><a href="https://o3afford.github.io/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2509.06233" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/Tongxuan259/O3Afford" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://class-robot.github.io/" target="_blank" rel="noopener">
+              <img class="cover-img" src="./assets/img/covers/CLASS_corl2026.jpg" alt="CLASS teaser">
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">CoRL</abbr>
+              <div class="title"><a href="https://class-robot.github.io/" target="_blank" rel="noopener">CLASS: Contrastive Learning via Action Sequence Supervision for Robot Manipulation</a></div>
+              <div class="author">Sung-Wook Lee, <strong>Xuhui Kang</strong>, Brandon Y. Yang, Yen-Ling Kuo</div>
+              <div class="periodical"><em>Conference on Robot Learning (CoRL)</em>, 2025</div>
+              <div class="pub-links"><a href="https://class-robot.github.io/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2508.01600" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/sean1295/CLASS" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://diffdagger.github.io/" target="_blank" rel="noopener">
+              <img class="cover-img" src="./assets/img/covers/DiffDagger.jpg" alt="Diff-DAgger teaser">
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">ICRA</abbr>
+              <div class="title"><a href="https://diffdagger.github.io/" target="_blank" rel="noopener">Diff-DAgger: Uncertainty Estimation with Diffusion Policy for Robotic Manipulation</a></div>
+              <div class="author">Sung-Wook Lee, <strong>Xuhui Kang</strong>, Yen-Ling Kuo</div>
+              <div class="periodical"><em>IEEE International Conference on Robotics and Automation (ICRA)</em>, 2025</div>
+              <div class="pub-links"><a href="https://diffdagger.github.io/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2410.14868" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/sean1295/DiffDAgger" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://live-robotics-uva.github.io/TaKSIE/" target="_blank" rel="noopener" aria-label="TaKSIE project page">
+              <div class="blurfill">
+                <video class="bg" autoplay loop muted playsinline><source src="./assets/img/covers/taksie_wacv2025.mp4" type="video/mp4"></video>
+                <video class="fg" autoplay loop muted playsinline><source src="./assets/img/covers/taksie_wacv2025.mp4" type="video/mp4"></video>
+              </div>
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">WACV</abbr>
+              <div class="title"><a href="https://live-robotics-uva.github.io/TaKSIE/" target="_blank" rel="noopener">Incorporating Task Progress Knowledge for Subgoal Generation in Robotic Manipulation through Image Edits</a></div>
+              <div class="author"><strong>Xuhui Kang</strong>, Yen-Ling Kuo</div>
+              <div class="periodical"><em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2025</div>
+              <div class="pub-links"><a href="https://live-robotics-uva.github.io/TaKSIE/" target="_blank" rel="noopener">Website</a> <a href="https://arxiv.org/abs/2410.11013" target="_blank" rel="noopener">arXiv</a> <a href="https://github.com/Shua-Kang/TaKSIE" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <a class="pub-media" href="https://arxiv.org/abs/2308.06405" target="_blank" rel="noopener">
+              <img class="cover-img" src="./assets/img/covers/whitebox_mia.jpg" alt="White-box membership inference teaser">
+            </a>
+            <div class="pub-info">
+              <abbr class="badge">PoPETS</abbr>
+              <div class="title"><a href="https://arxiv.org/abs/2308.06405" target="_blank" rel="noopener">White-box Membership Inference Attacks against Diffusion Models</a></div>
+              <div class="author">Yan Pang, Tianhao Wang, <strong>Xuhui Kang</strong>, Mengdi Huai, Yang Zhang</div>
+              <div class="periodical"><em>Proceedings on Privacy Enhancing Technologies (PoPETS)</em>, 2025</div>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2308.06405" target="_blank" rel="noopener">arXiv</a></div>
+            </div>
+          </div>
+
+        </div>
+
+        <br>
+        <p><small>Powered by <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+
+      </section>
+      <footer></footer>
+    </div>
+
+    <script>
+      function showPubs(which) {
+        var selected = which === 'selected';
+        document.getElementById('pubs-selected').style.display = selected ? 'block' : 'none';
+        document.getElementById('pubs-full').style.display = selected ? 'none' : 'block';
+        document.getElementById('btn-selected').classList.toggle('active', selected);
+        document.getElementById('btn-full').classList.toggle('active', !selected);
+      }
+    </script>
+    <script src="./assets/js/scale.fix.js"></script>
+    <script data-goatcounter="https://shuakang.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

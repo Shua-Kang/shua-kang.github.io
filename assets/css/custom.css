@@ -1,0 +1,162 @@
+/* =====================================================================
+   Custom styles on top of the Minimal Light theme.
+     - Publications as rows: a fixed 16:9 media thumbnail on the left
+       (image or video) and the paper details on the right.
+     - Non-16:9 videos are shown in full and their side gaps are filled
+       with a blurred, scaled copy of the same video (no black bars).
+     - Images are cropped to 16:9 (object-fit: cover).
+     - The Selected / Full list toggle.
+   Colors reuse the theme's variables so light + dark stay in sync.
+   ===================================================================== */
+
+/* ---------------------- Selected / Full toggle ---------------------- */
+.pub-toggle {
+  display: inline-flex;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 0 1.6rem;
+}
+.pub-toggle button {
+  font-family: inherit;
+  font-size: 0.95rem;
+  border: 0;
+  background: transparent;
+  color: var(--global-theme-color);
+  padding: 5px 18px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.pub-toggle button + button { border-left: 1px solid var(--global-theme-color); }
+.pub-toggle button:hover { background: rgba(0, 45, 114, 0.08); }
+.pub-toggle button.active { background: var(--global-theme-color); color: #fff; }
+
+/* Default view: Selected shown, Full list hidden (JS toggles thereafter) */
+#pubs-full { display: none; }
+
+/* ------------------------- Publication rows ------------------------- */
+.pub-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 1.5rem; }
+
+/* Left media: fixed 16:9 box */
+.pub-media {
+  flex: 0 0 auto;
+  width: 210px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background: #eef0f3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  display: block;
+  line-height: 0;
+}
+a.pub-media { cursor: pointer; }
+.pub-media .cover-img,
+.pub-media > .cover-vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* images + 16:9 videos: crop-to-fill */
+  display: block;
+  transition: transform 0.25s ease;
+}
+a.pub-media:hover .cover-img,
+a.pub-media:hover > .cover-vid,
+a.pub-media:hover .blurfill .fg { transform: scale(1.04); }
+
+/* Blurred-fill for non-16:9 videos: sharp video centered, blurred copy behind */
+.blurfill { position: absolute; inset: 0; }
+.blurfill .bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: blur(14px) brightness(0.92) saturate(1.05);
+  transform: scale(1.18);
+}
+.blurfill .fg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+/* Placeholder when there is no media */
+.cover-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #eef2f7, #dfe5ee);
+  color: #b6c0cd;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+/* Right side: paper details */
+.pub-info { flex: 1 1 auto; min-width: 0; line-height: 1.5; }
+.pub-info .badge {
+  position: static;
+  display: inline-block;
+  background-color: var(--global-theme-color);
+  color: #fff !important;
+  font-size: 70%;
+  padding: 0.3em 0.6em;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.pub-info .title { font-weight: 600; color: #043361; line-height: 1.28; margin: 0 0 2px; }
+.pub-info .title a { color: #043361; }
+.pub-info .title a:hover { color: var(--global-theme-color); text-decoration: underline; }
+.pub-info .title sup, .pub-info .author sup { font-size: 0.68em; }
+.pub-info .author { margin: 0 0 2px; }
+.pub-info .author strong { color: #222; }
+.pub-info .periodical { color: #7a7a7a; font-size: 0.95rem; }
+
+/* Section headers in the full list */
+.pub-group-h {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 5px;
+  margin: 1.6rem 0 1rem;
+}
+.pub-group-h:first-child { margin-top: 0.25rem; }
+
+/* Shared bits */
+.eq-note { color: #9a9a9a; font-size: 0.85rem; }
+.pub-links { margin-top: 6px; }
+.pub-links a {
+  display: inline-block;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--global-theme-color);
+  border: 1px solid var(--global-theme-color);
+  border-radius: 4px;
+  padding: 1px 10px;
+  margin-right: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.pub-links a:hover { background: var(--global-theme-color); color: #fff !important; }
+
+/* ----------------------------- Dark mode ---------------------------- */
+@media (prefers-color-scheme: dark) {
+  .pub-toggle button:hover { background: rgba(62, 183, 240, 0.16); }
+  .pub-toggle button.active { color: #20212b; }
+
+  .pub-media { background: #1a1b23; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+  .cover-placeholder { background: linear-gradient(135deg, #2a2c37, #22232d); color: #565a67; }
+
+  .pub-info .title, .pub-info .title a { color: #eeeff0; }
+  .pub-info .author strong { color: #ffffff; }
+  .pub-info .periodical { color: #a9abb3; }
+  .pub-group-h { border-bottom-color: rgba(255, 255, 255, 0.14); }
+
+  .eq-note { color: #8a8c94; }
+  .pub-links a:hover { color: #20212b !important; }
+}
+
+/* ----------------------------- Mobile ------------------------------- */
+@media (max-width: 480px) {
+  .pub-item { gap: 12px; }
+  .pub-media { width: 130px; }
+}
